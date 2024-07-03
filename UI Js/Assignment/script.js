@@ -37,11 +37,11 @@ window.addEventListener("scroll" , function(){
     let scrollheight=document.documentElement.scrollHeight;
     let scrolltop=document.documentElement.scrollTop;
 
-    // console.log(clientheight,scrollheight,scrolltop)
+    console.log(clientheight,scrollheight,scrolltop)
 
     if(scrollheight-clientheight <= Math.ceil(scrolltop)){
-        page++
+        
         getData(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=10`)
-        // page++;
+        page++;
     }
 })
