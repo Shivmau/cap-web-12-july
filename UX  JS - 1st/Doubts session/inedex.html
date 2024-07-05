@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let duedate= "2024-06-10T12:00:00"
+    let duedate1= new Date(duedate)
+    let latestTime= new Date();
+
+    let reamainingTime = Math.ceil((duedate1-latestTime)/1000%60)
+    console.log(latestTime,duedate1, reamainingTime)
+    
+    // if(reamainingTime<2){
+    //     return "High"
+    // }
+
+
+
+</script>
+
+
+
+
