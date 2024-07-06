@@ -16,7 +16,7 @@ getData(`https://jsonplaceholder.typicode.com/photos?_page=${page}&_limit=10`)
 
 
 const displayData =(arr)=>{
-
+ 
     arr.forEach((ele)=>{
         let box=document.createElement("div")
 
