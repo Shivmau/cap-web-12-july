@@ -35,3 +35,7 @@ let obj={}
 
 iphone3.call(obj,5657,"yellow",8.7,"50mp",5.0)
 console.log(obj)
+console.log(obj.dial())
+console.log(obj.sendMessage())
+console.log(obj.cameraClick())
+console.log(obj.connectBluetooth())
