@@ -1,5 +1,5 @@
 
-function iphone3(ASIN,color,display,camera,bluetooth){
+function Iphone3(ASIN,color,display,camera,bluetooth){
 
     this.ASIN=ASIN,
     this.color=color,
@@ -28,12 +28,12 @@ function iphone3(ASIN,color,display,camera,bluetooth){
 }
 
 
-// let data1=new iphone3(35454,"red",4.5,"45mp",6.0)
+// let data1=new Iphone3(35454,"red",4.5,"45mp",6.0)
 // console.log(data1)
 
 let obj={}
 
-iphone3.call(obj,5657,"yellow",8.7,"50mp",5.0)
+Iphone3.call(obj,5657,"yellow",8.7,"50mp",5.0)
 console.log(obj)
 console.log(obj.dial())
 console.log(obj.sendMessage())
