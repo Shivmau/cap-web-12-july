@@ -53,6 +53,14 @@ console.log(a.increasePrice(600))
 console.log(a.decreasePrice(300))
 console.log(a.isExpensive())
 
+
+
+
+console.log("******************Part-2**********************")
+
+
+
+
 let billObj = {
   bill: function () {
     return this.price - (this.price * 10) / 100;
@@ -66,12 +74,6 @@ let detailsObj = {
     } at a price ${this.bill()} having a discount of 10%`;
   },
 };
-
-
-
-
-console.log("******************Part-2**********************")
-
 
 
 
@@ -116,6 +118,14 @@ console.log(bill1)
 
 console.log(b.details())
 
+
+
+
+console.log("******************Part-3*********************")
+
+
+
+
 let materials = {
   bill2: function () {
     return this.price - (this.price * 15) / 100;
@@ -126,14 +136,6 @@ let materials = {
     } of materail at price ${this.bill2()} having a discount of 15%`;
   },
 };
-
-
-
-
-
-console.log("******************Part-3*********************")
-
-
 
 
 function crockery1(product_name, brand, reviews, price, rating, warranty) {
