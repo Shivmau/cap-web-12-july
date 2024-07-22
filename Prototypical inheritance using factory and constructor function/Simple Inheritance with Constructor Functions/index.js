@@ -1,19 +1,31 @@
+let aniObj={
+  makeSound:function(){
+    return this.sound
+  }
+}
+
+
 function createAnimal(name, sound) {
   this.name = name;
   this.sound = sound;
-  this.makeSound = function () {
-    return `${this.sound}`;
-  };
+  Object.setPrototypeOf(this,aniObj)
+}
+
+let createObj={
+  fetch:function(){
+    return this.name
+  }
 }
 
 function createDog(name, sound, breed) {
   createAnimal.call(this, name, sound);
   this.breed = breed;
 
-  this.fetch = function () {
-    return `${this.name}`;
-  };
+ Object.setPrototypeOf(this,createObj)
+
 }
+
+Object.setPrototypeOf(createObj,aniObj)
 
 let animal = new createDog("Buddy", "Woof", "Labrador");
 console.log(animal);

@@ -1,4 +1,8 @@
-
+let soundObj={
+    makeSound:function(){
+        return this.sound;
+    }
+}
 
 function createAnimal(name,sound){
 
@@ -6,9 +10,7 @@ function createAnimal(name,sound){
 
     obj.name=name;
     obj.sound=sound;
-    obj.makeSound=function(){
-        return `${this.sound}`
-    }
+   Object.setPrototypeOf(obj,soundObj)
 
     return obj
 }
@@ -16,18 +18,22 @@ function createAnimal(name,sound){
 // let a=createAnimal("bufallos", "boo")
 
 // console.log(a)
-
+let fetchObj={
+    fetch:function(){
+        return this.name
+    }
+}
 function createDog(name,sound,breed){
 
     let obj=createAnimal(name,sound)
     obj.breed=breed;
 
-    obj.fetch=function(){
-        return `${this.name}`
-    }
+   Object.setPrototypeOf(obj,fetchObj)
 
     return obj
 }
+
+Object.setPrototypeOf(fetchObj,soundObj)
 
 let animal=createDog("Buddy","Woof","Labrador")
 console.log(animal)

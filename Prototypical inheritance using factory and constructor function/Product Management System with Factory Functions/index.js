@@ -1,3 +1,4 @@
+
 function CreateProduct(product_name,brand,reviews,price,rating){
 
     let obj={}
