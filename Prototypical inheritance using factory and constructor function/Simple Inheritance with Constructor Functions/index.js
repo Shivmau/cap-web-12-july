@@ -1,37 +1,30 @@
-let aniObj={
-  makeSound:function(){
-    return this.sound
-  }
+Animal.prototype.makeSound=function(){
+  return this.sound
 }
 
+function Animal(name,sound){
 
-function createAnimal(name, sound) {
-  this.name = name;
-  this.sound = sound;
-  Object.setPrototypeOf(this,aniObj)
+  this.name=name;
+  this.sound=sound;
 }
 
-let createObj={
-  fetch:function(){
-    return this.name
-  }
+// let a=new Animal("Buffalo", "bobo")
+// console.log(a)
+// console.log(a.makeSound())
+
+Dog.prototype.fetch=function(){
+  return this.name
 }
 
-function createDog(name, sound, breed) {
-  createAnimal.call(this, name, sound);
-  this.breed = breed;
+Object.setPrototypeOf(Dog.prototype,Animal.prototype)
 
- Object.setPrototypeOf(this,createObj)
+function Dog(name,sound,bread){
+  Animal.call(this,name,sound,bread)
+  this.bread=bread;
 
 }
 
-Object.setPrototypeOf(createObj,aniObj)
-
-let animal = new createDog("Buddy", "Woof", "Labrador");
-console.log(animal);
-
-let makeSound = animal.makeSound();
-console.log(makeSound);
-
-let fetch = animal.fetch();
-console.log(fetch);
+let b=new Dog("Tiger", "brabra", "yes")
+console.log(b)
+console.log(b.makeSound())
+console.log(b.fetch())
