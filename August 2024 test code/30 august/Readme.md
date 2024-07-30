@@ -1,0 +1,13 @@
+- Decleartive := 
+
+
+
+
+
+
+
+
+
+
+
+- Imperative 
