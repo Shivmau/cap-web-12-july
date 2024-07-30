@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealDB App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-search">Search</a></li>
+            <li><a href="#" id="nav-recipe-of-the-day">Recipe of the Day</a></li>
+            <li><a href="#" id="nav-random-recipes">Random Recipes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="page">
+            <h1>Welcome to MealDB App</h1>
+        </section>
+        <section id="search" class="page hidden">
+            <h1>Search for Recipes</h1>
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <div id="search-results"></div>
+        </section>
+        <section id="recipe-of-the-day" class="page hidden">
+            <h1>Recipe of the Day</h1>
+            <div id="recipe-of-the-day-content"></div>
+        </section>
+        <section id="random-recipes" class="page hidden">
+            <h1>Random Recipes</h1>
+            <div id="random-recipes-content"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
